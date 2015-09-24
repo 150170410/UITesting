@@ -25,7 +25,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="width" constant="112" id="KbV-Zy-tWx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -88,7 +88,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add device" id="bcI-ie-70F">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="PV2-t4-hff"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="PV2-t4-hff">
+                            <connections>
+                                <action selector="clickOnAddButton:" destination="eY2-S7-M8t" id="V3w-bS-XgW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textField" destination="3Xc-wo-1gi" id="iW8-Hd-TsN"/>
