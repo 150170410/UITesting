@@ -88,7 +88,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add device" id="bcI-ie-70F">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="PV2-t4-hff"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="PV2-t4-hff">
+                            <connections>
+                                <action selector="clickOnAddButton:" destination="eY2-S7-M8t" id="UTB-Cw-UzE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textField" destination="3Xc-wo-1gi" id="iW8-Hd-TsN"/>
