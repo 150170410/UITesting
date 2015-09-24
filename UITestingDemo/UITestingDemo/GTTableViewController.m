@@ -21,8 +21,8 @@
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.navigationItem.rightBarButtonItem setAccessibilityTraits:UIAccessibilityTraitButton];
-    [self.navigationItem.rightBarButtonItem setIsAccessibilityElement:YES];
+//    [self.navigationItem.rightBarButtonItem setAccessibilityTraits:UIAccessibilityTraitButton];
+//    [self.navigationItem.rightBarButtonItem setIsAccessibilityElement:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
