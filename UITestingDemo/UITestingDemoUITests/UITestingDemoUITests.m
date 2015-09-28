@@ -70,4 +70,23 @@
     XCTAssertEqual(tables.cells.count, (count + 1));//Add 1 item
 }
 
+- (void)testUIReorderCells {
+    XCUIElement* devicesNavigationBar = application.navigationBars[@"Devices"];
+    [devicesNavigationBar.buttons[@"Edit"] tap];
+    
+    XCUIElementQuery* tables = application.tables;
+    int itemCount = (int)tables.cells.count;
+    int counter = 0;
+    while (counter < (itemCount - 1)) {
+        XCUIElement* cell = [tables.cells elementBoundByIndex:counter];
+        XCUIElement* reorderButton = [cell.buttons matchingPredicate:[NSPredicate predicateWithFormat:@"label BEGINSWITH 'Reorder'"]].element;
+        int nextCounter = (counter + 1);
+        XCUIElement* cell1 = [tables.cells elementBoundByIndex:nextCounter];
+        XCUIElement* reorderButton1 = [cell1.buttons matchingPredicate:[NSPredicate predicateWithFormat:@"label BEGINSWITH 'Reorder'"]].element;
+        [reorderButton pressForDuration:2 thenDragToElement:reorderButton1];
+        counter++;
+    }
+    [devicesNavigationBar.buttons[@"Done"] tap];
+}
+
 @end
